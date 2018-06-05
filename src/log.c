@@ -55,4 +55,5 @@ void write_log(log_t *log, char *buff, int size, log_type type){
 
     // write log
     fwrite(buff, size, 1, log->fp);
+    fllush(log->fp);
 }
